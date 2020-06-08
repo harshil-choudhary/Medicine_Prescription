@@ -1,12 +1,15 @@
+//Harshil Choudhary
+//harshilchoudharyids@gmail.com
 
 import React from 'react';  
 import {StyleSheet, Text, View} from 'react-native';  
 import { createBottomTabNavigator, createAppContainer, FlatList} from 'react-navigation';  
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';  
 import Icon from 'react-native-vector-icons/FontAwesome';  
-import HorizontalFlatList from './HorizontalFlatList';
+import HomeScreen from './HomeScreen';
+import MedicationScreen from './MedicationScreen';
 
-class TodayScreen extends React.Component {  
+class TodayScreen extends React.Component {     //classes for different screen from navigation at bottom bar
   render() {  
     return (  
         <View style={styles.container}>  
@@ -16,7 +19,7 @@ class TodayScreen extends React.Component {
   }  
 }  
 
-class MedicationScreen extends React.Component {  
+class MedScreen extends React.Component {  
   render() {  
     return (  
         <View style={styles.container}>  
@@ -64,9 +67,9 @@ const styles = StyleSheet.create({
     },  
 });  
 
-const TabNavigator = createMaterialBottomTabNavigator( 
+const TabNavigator = createMaterialBottomTabNavigator(      //bottom tab
     {  
-        Home: { screen: HorizontalFlatList,  
+        Home: { screen: HomeScreen,                 //from Horizontal
             navigationOptions:{  
                 tabBarLabel:'Today',  
                 tabBarIcon: ({ tintColor }) => (  

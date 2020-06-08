@@ -8,7 +8,7 @@ var todays_Medication_Data =[
         days: "Daily",
         name: "Xanax(1mg)",
         qty: "120 days",
-        fills:"14 left" 
+        fills:"14 left", 
     },
     {
         time: "8:00 AM",
